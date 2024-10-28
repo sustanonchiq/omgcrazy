@@ -19,14 +19,6 @@ document.querySelectorAll('*').forEach((elem) => {
 		elem.textContent = elem.textContent.replaceAll('...', getQueryParams().username)
 	}
 
-	// if (elem.value && elem.value.includes('5,050') && elem.childNodes.length === 1) {
-	// 	console.log(elem)
-	// 	elem.textContent = elem.textContent.replaceAll(
-	// 		'5,050',
-	// 		(getQueryParams().bet / 1000 + '').replace('.', ','),
-	// 	)
-	// }
-
 	if (elem.textContent.includes('5,050') && elem.childNodes.length === 1) {
 		elem.textContent = elem.textContent.replaceAll('5,050', getQueryParams().bet)
 	}
@@ -34,6 +26,14 @@ document.querySelectorAll('*').forEach((elem) => {
 	document.querySelector(
 		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(3) > div > div.table-cell-value.tm-value.icon-before.icon-ton',
 	).textContent = Math.floor((getQueryParams().bet / 100) * 10)
+
+	document.querySelector(
+		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(1) > div > div.table-cell-desc',
+	).textContent = ` ~ $${getQueryParams().bet * 5.4}`
+
+	document.querySelector(
+		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(3) > div > div.table-cell-desc',
+	).textContent = ` ~ $${getQueryParams().bet * 0.54}`
 
 	if (elem.textContent.includes('253') && elem.childNodes.length === 1) {
 		elem.textContent = Math.floor((getQueryParams().bet / 100) * 5)
