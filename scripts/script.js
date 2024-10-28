@@ -19,17 +19,17 @@ document.querySelectorAll('*').forEach((elem) => {
 		elem.textContent = elem.textContent.replaceAll('...', getQueryParams().username)
 	}
 
-	if (elem.textContent.includes('5303') && elem.childNodes.length === 1) {
-		elem.textContent = elem.textContent.replaceAll('5303', getQueryParams().bet)
-	}
+	// if (elem.value && elem.value.includes('5,050') && elem.childNodes.length === 1) {
+	// 	console.log(elem)
+	// 	elem.textContent = elem.textContent.replaceAll(
+	// 		'5,050',
+	// 		(getQueryParams().bet / 1000 + '').replace('.', ','),
+	// 	)
+	// }
 
-	if (elem.value && elem.value.includes('5,303') && elem.childNodes.length === 1) {
-		elem.value = getQueryParams().bet
-	}
-
-	if (elem.textContent.includes('5,303') && elem.childNodes.length === 1) {
+	if (elem.textContent.includes('5,050') && elem.childNodes.length === 1) {
 		elem.textContent = elem.textContent.replaceAll(
-			'5,303',
+			'5,050',
 			(getQueryParams().bet / 1000 + '').replace('.', ','),
 		)
 	}
