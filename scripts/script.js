@@ -46,4 +46,8 @@ document.addEventListener('click', (e) => {
 	}
 })
 
+document.querySelector('.js-popup-closer').addEventListener('click', () => {
+	document.querySelector('.js-bet-popup').classList.add('hide')
+})
+
 document.querySelector('.js-bet-popup .popup-body h4 span').textContent = getQueryParams().bet
