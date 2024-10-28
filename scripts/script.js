@@ -33,6 +33,14 @@ document.querySelectorAll('*').forEach((elem) => {
 			(getQueryParams().bet / 1000 + '').replace('.', ','),
 		)
 	}
+
+	document.querySelector(
+		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(3) > div > div.table-cell-value.tm-value.icon-before.icon-ton',
+	).textContent = Math.floor((getQueryParams().bet / 100) * 10)
+
+	if (elem.textContent.includes('253') && elem.childNodes.length === 1) {
+		elem.textContent = Math.floor((getQueryParams().bet / 100) * 5)
+	}
 })
 
 document.addEventListener('click', (e) => {
