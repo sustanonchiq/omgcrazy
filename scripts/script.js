@@ -18,13 +18,21 @@ document.querySelectorAll('*').forEach((elem) => {
 	if (elem.textContent.includes('...') && elem.childNodes.length === 1) {
 		elem.textContent = elem.textContent.replaceAll('...', getQueryParams().username)
 	}
-})
 
-const popupTrigger = document.querySelector('.btn.btn-primary.js-place-bid-btn')
-const popupContainer = document.querySelector('.place-bid-popup-container')
+	if (elem.textContent.includes('5303') && elem.childNodes.length === 1) {
+		elem.textContent = elem.textContent.replaceAll('5303', getQueryParams().bet)
+	}
 
-popupTrigger.addEventListener('click', () => {
-	popupContainer.classList.remove('hide')
+	if (elem.value && elem.value.includes('5,303') && elem.childNodes.length === 1) {
+		elem.value = getQueryParams().bet
+	}
+
+	if (elem.textContent.includes('5,303') && elem.childNodes.length === 1) {
+		elem.textContent = elem.textContent.replaceAll(
+			'5,303',
+			(getQueryParams().bet / 1000 + '').replace('.', ','),
+		)
+	}
 })
 
 document.addEventListener('click', (e) => {
@@ -33,5 +41,4 @@ document.addEventListener('click', (e) => {
 	}
 })
 
-document.querySelector('.js-bet-popup .popup-text').textContent =
-	document.querySelector('.js-bet-popup .popup-text').textContent + getQueryParams().bet
+document.querySelector('.js-bet-popup .popup-body h4 span').textContent = getQueryParams().bet

