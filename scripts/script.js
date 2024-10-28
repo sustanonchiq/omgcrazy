@@ -28,10 +28,7 @@ document.querySelectorAll('*').forEach((elem) => {
 	// }
 
 	if (elem.textContent.includes('5,050') && elem.childNodes.length === 1) {
-		elem.textContent = elem.textContent.replaceAll(
-			'5,050',
-			(getQueryParams().bet / 1000 + '').replace('.', ','),
-		)
+		elem.textContent = elem.textContent.replaceAll('5,050', getQueryParams().bet)
 	}
 
 	document.querySelector(
