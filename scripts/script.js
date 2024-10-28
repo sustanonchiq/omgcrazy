@@ -25,7 +25,7 @@ document.querySelectorAll('*').forEach((elem) => {
 
 	document.querySelector(
 		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(3) > div > div.table-cell-value.tm-value.icon-before.icon-ton',
-	).textContent = Math.floor((getQueryParams().bet / 100) * 10)
+	).textContent = Math.floor(getQueryParams().bet * 1.05)
 
 	document.querySelector(
 		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(1) > div > div.table-cell-desc',
@@ -33,7 +33,7 @@ document.querySelectorAll('*').forEach((elem) => {
 
 	document.querySelector(
 		'#aj_content > main > section.tm-section.tm-auction-section > div.tm-section-box.tm-section-bid-info > table > tbody > tr > td:nth-child(3) > div > div.table-cell-desc',
-	).textContent = ` ~ $${getQueryParams().bet * 0.54}`
+	).textContent = ` ~ $${Math.floor(getQueryParams().bet * (5.4 * 1.05))}`
 
 	if (elem.textContent.includes('253') && elem.childNodes.length === 1) {
 		elem.textContent = Math.floor((getQueryParams().bet / 100) * 5)
